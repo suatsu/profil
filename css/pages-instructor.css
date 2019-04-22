@@ -1,0 +1,789 @@
+@charset "utf-8";
+/* ---------------------------------------------
+CSS Info
+
+ File name:  pages-instructor.css
+ Style Info: 講師アーカイブ＆詳細用スタイル
+
+------------------------------------------------ */
+
+/*↓↓↓一覧*****************************************************/
+.instructor-idx-read {
+  margin: 0 auto;
+  max-width: 560px;
+  position: relative;
+  z-index: 2;
+}
+.instructor-idx-read h2 {
+  color: #111;
+  font-size: 28px;
+  font-weight: bold;
+}
+.instructor-idx-read-sub {
+  background: #F1F1F1;
+  border-radius: 16px;
+  font-size: 14px;
+  position: relative;
+  z-index: 1;
+}
+@media screen and (max-width:767px) {
+/*SP*/
+  .instructor-list {
+    margin: 40px auto 26px;
+  }
+}
+@media screen and (min-width:768px) {
+/*PC*/
+  .instructor-list {
+    margin: 40px auto 76px;
+  }
+}
+.instructor-list-box {
+  letter-spacing: -.40em;
+}
+.instructor-list-box li {
+  display: inline-block;
+  letter-spacing: normal;
+  margin-bottom: 24px;
+  padding: 0 16px;
+  vertical-align: top;
+}
+.instructor-list-contents > a img {
+  -webkit-transition: none;
+  -moz-transition: none;
+  transition: none;
+}
+.instructor-list-contents > a:hover img {
+  filter: alpha(opacity=100);
+  -moz-opacity: 1;
+  opacity: 1;
+}
+.instructor-list-contents p.name {
+  font-family: 'Droid Serif', serif;
+  font-size: 20px;
+  font-weight: 300;
+  color: #333;
+}
+.instructor-list-contents p.register {
+  text-align: right;
+}
+.instructor-list-contents p.register span {
+  background: url(../img/instructor/icon-school.gif) no-repeat left center;
+  font-size: 14px;
+  padding-left: 18px;
+}
+.instructor-popup {
+  background: #fff;
+  margin: 10px auto;
+  max-width: 880px;
+  position: relative;
+  padding: 12px 24px;
+}
+.instructor-popup h4 {
+  background: #F9E8EA;
+  color: #333;
+  font-family: 'Droid Serif', serif;
+  font-size: 32px;
+  font-weight: 300;
+  padding: 8px;
+  text-align: center;
+}
+.instructor-popup-inner {
+  margin-top: 16px;
+}
+.instructor-upper-desc dl dt {
+  float: left;
+  clear: left;
+  padding-bottom: 16px;
+  font-weight: bold;
+  width: 4em;
+}
+.instructor-upper-desc dl dd {
+  margin-left: 4em;
+  padding-bottom: 16px;
+}
+.popup-modal-dismiss {
+  margin-top: 24px;
+  text-align: center;
+}
+
+@media screen and (max-width:767px) {
+/*SP*/
+  .instructor-idx-read h2 {
+    font-size: 22px;
+  }
+  .instructor-idx-read-sub {
+    margin: 116px 0 32px;
+    padding: 16px 24px;
+  }
+  .instructor-idx-read-sub:before {
+    content: url(../img/instructor/bg-instructor-read-sub_m.png);
+    left: 50%;
+    margin-left: -91px;
+    position: absolute;
+    top: -100px;
+  }
+  .instructor-list-box li {
+    width: 50%;
+  }
+/*SP*/
+}
+
+@media screen and (min-width:480px) {
+/*480px以上*/
+  .instructor-list-box li {
+    width: 33%;
+  }
+/*480px以上*/
+}
+
+@media screen and (min-width:768px) {
+/*PC*/
+  .instructor-idx-read-sub {
+    margin: 24px 70px;
+    padding: 24px 32px;
+  }
+  .instructor-idx-read-sub:before {
+    content: url(../img/instructor/bg-instructor-read-sub.png);
+    position: absolute;
+    top: -74px;
+    left: -71px;
+  }
+  .instructor-list-contents p.name {
+    font-size: 24px;
+  }
+  .instructor-upper {
+    display: table;
+    width: 100%;
+  }
+  .instructor-upper-img,
+  .instructor-upper-desc {
+    display: table-cell;
+    vertical-align: top;
+  }
+  .instructor-upper-img {
+    width: 240px;
+  }
+  .instructor-upper-desc {
+    padding-left: 32px;
+  }
+/*PC*/
+}
+
+@media screen and (min-width:960px) {
+/*960px以上*/
+  .instructor-list-box li {
+    width: 25%;
+  }
+  .instructor-upper-img {
+    width: 280px;
+  }
+  .instructor-upper-desc {
+    padding-left: 40px;
+  }
+/*960px以上*/
+}
+/*↑↑↑一覧*****************************************************/
+
+
+/*↓↓↓講師詳細*************************************************/
+.instructor-dp-name {
+  color: #111;
+  font-family: 'Droid Serif', serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  padding-top: 19px;
+  position: relative;
+}
+.instructor-dp-name:before {
+  background: url(../img/instructor/bg-instructor-name.png) no-repeat;
+  background-size: 105px 19px;
+  content: "";
+  height: 19px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 105px;
+}
+.instructor-dp-briefly {
+  background-image: url(../imgs/icon-sbracket-l.png), url(../imgs/icon-sbracket-r.png);
+  background-position: left top, right bottom;
+  background-repeat: no-repeat;
+  display: inline-block;
+  padding: 8px 16px;
+}
+.instructor-dp-briefly span {
+  background: #ffd1e1;
+  background: -webkit-gradient(linear,left top,left bottom, color-stop(0.5, #fff), color-stop(1.00, #ffd1e1) );
+  background: -webkit-linear-gradient(transparent 70%, #ffd1e1 0%);
+  background: linear-gradient(transparent 70%, #ffd1e1 0%);
+  color: #111;
+  font-weight: bold;
+  line-height: 1.2;
+}
+.instructor-dp-profile-desc dl {
+  font-size: 14px;
+  margin-top: 16px;
+}
+.instructor-dp-profile-desc dl dt {
+  font-weight: bold;
+  overflow: hidden;
+  position: relative;
+}
+.instructor-dp-profile-desc dl dt:after {
+  border-bottom: 1px dotted #DDD;
+  content: "";
+  display: inline-block;
+  margin-left: 0.75em;
+  position: absolute;
+  top: 11px;
+  vertical-align: top;
+  width: 100%;
+}
+.type.usa {
+  background: url(../img/instructor/flag-usa.png) no-repeat left center;
+}
+.type.uk {
+  background: url(../img/instructor/flag-gbr.png) no-repeat left center;
+}
+.type.aus {
+  background: url(../img/instructor/flag-aus.png) no-repeat left center;
+}
+.type {
+  padding-left: 25px;
+  background-size: 21px 14px !important;
+}
+#instructor-dp-interview {
+  background: url(../imgs/bg-check-gray.png);
+  margin-top: 80px;
+  padding-bottom: 16px;
+}
+#instructor-dp-interview .instructor-dp-interview-tit {
+  position: relative;
+  top: -24px;
+  text-align: center;
+}
+#instructor-dp-interview .instructor-dp-interview-tit h3 {
+  background-image: url(../img/common/bg-parenthesis-l.png), url(../img/common/bg-parenthesis-r.png);
+  background-position: left center, right center;
+  background-repeat: no-repeat;
+  color: #222;
+  display: inline-block;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 1.2;
+  padding: 0 40px;
+  position: relative;
+}
+#instructor-dp-interview .instructor-dp-interview-tit h3:before {
+  background: url(../img/instructor/tit-interview01.png) no-repeat;
+  background-size: 148px 17px;
+  content: "";
+  height: 17px;
+  left: 50%;
+  margin-left: -73px;
+  position: absolute;
+  top: -25px;
+  width: 148px;
+}
+#instructor-dp-interview .instructor-dp-interview-tit h3:after {
+  background: url(../img/instructor/tit-interview02.png) no-repeat;
+  background-size: 205px 16px;
+  bottom: -20px;
+  content: "";
+  height: 16px;
+  left: 50%;
+  margin-left: -103px;
+  position: absolute;
+  width: 205px;
+}
+#instructor-dp-interview .interview-wrap01,
+#instructor-dp-interview .interview-wrap02 {
+  margin: 40px 0 48px;
+}
+.interview-box-inn {
+  background: #fff;
+  box-shadow: 4px 5px 0 0 #ddd;
+  padding: 32px;
+}
+#instructor-dp-interview .interview-box h4 {
+  background: url(../img/common/bg-lip-trans.png) no-repeat left center;
+  background-size: auto 36px;
+  color: #222;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+#instructor-dp-interview .interview-box p {
+  line-height: 1.8;
+}
+.inst-message-txt {
+  background-color: #fff;
+  border: 1px solid #222;
+  border-radius: 8px;
+  color: #222;
+  font-family: 'Droid Serif', serif;
+  font-weight: 400;
+  font-size: 13px;
+  padding: 12px 16px;
+  position: relative;
+}
+#inst-message01 .inst-message-txt {
+  margin-right: 16px;
+}
+#inst-message02 .inst-message-txt {
+  background-image: url(../img/instructor/bg-message02.png);
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  margin-left: 16px;
+}
+#inst-message01 .inst-message-txt:before {
+  background: url(../img/instructor/icon-message01.png) no-repeat;
+  background-size: 104px 39px;
+  content: "";
+  height: 39px;
+  position: absolute;
+  right: -12px;
+  top: -14px;
+  width: 104px;
+}
+#inst-message02 .inst-message-txt:before {
+  background: url(../img/instructor/icon-message02.png) no-repeat;
+  background-size: 44px 28px;
+  content: "";
+  height: 28px;
+  left: -16px;
+  position: absolute;
+  top: -14px;
+  width: 44px;
+}
+.inst-message-txt:after {
+  background: url(../img/instructor/bg-message.png) no-repeat;
+  bottom: -8px;
+  content: "";
+  height: 8px;
+  left: 50%;
+  margin-left: -8px;
+  position: absolute;
+  width: 16px;
+}
+.inst-message-img {
+  margin-top: 8px;
+  text-align: center;
+}
+.inst-message-img img {
+  max-height: 320px;
+}
+#inst-like h4 {
+  position: relative;
+  text-align: center;
+  z-index: 2;
+}
+#inst-like h4 img {
+  max-width: 160px;
+  height: auto;
+  width: 100%;
+}
+#inst-like .inst-like-inner {
+  background-color: #fff;
+  background-image: url(../img/instructor/message-bar-hd.png), url(../img/instructor/message-bar-ft.png);
+  background-position: left top, left bottom;
+  background-repeat: repeat-x;
+  border-left: 1px solid #222;
+  border-right: 1px solid #222;
+  padding: 24px 16px;
+  position: relative;
+  top: -26px;
+  z-index: 1;
+}
+.inst-like-inner .inst-like-img {
+  text-align: center;
+}
+.inst-like-inner .inst-like-title {
+  color: #222;
+  font-weight: bold;
+  margin: 0.25em 0;
+}
+.inst-like-inner .inst-like-text {
+  font-size: 14px;
+}
+
+@media screen and (max-width:767px) {
+/*SP*/
+  .instructor-dp-name {
+    font-size: 28px;
+  }
+  .instructor-dp-profile-img {
+    text-align: center;
+  }
+  .instructor-dp-profile-desc {
+    margin-top: 24px;
+  }
+  .instructor-dp-profile-desc dl dt {
+    margin-bottom: 0.25em;
+  }
+  .instructor-dp-profile-desc dl dd {
+    padding-bottom: 1em;
+  }
+  #instructor-dp-interview .instructor-dp-interview-tit h3 {
+    background-size: 10px 38px;
+    font-size: 32px;
+    padding: 0 32px;
+  }
+  #instructor-dp-interview .interview-wrap01,
+  #instructor-dp-interview .interview-wrap02 {
+    margin: 24px 0;
+  }
+  #instructor-dp-interview .interview-box {
+    margin-bottom: 28px;
+  }
+  #instructor-dp-interview .interview-box h4 {
+    background-size: auto 24px;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+  #instructor-dp-interview .interview-box p {
+    font-size: 14px;
+  }
+  #inst-message01,
+  #inst-message02 {
+    width: 256px;
+    margin: 0 auto;
+  }
+  /*↓↓↓動画SP*/
+  .pc-youtube-main {
+    display: none;
+  }
+  .sp-youtube-main {
+      margin: 80px auto 0;
+      position: relative;
+      width: 90%;
+  }
+  .youtube-item {
+    position: relative;
+    padding-top: 56.25%;
+    width: 100%;
+  }
+  .youtube-item iframe {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+   }
+  .youtube {
+    display: inline-block;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+  }
+  .youtube img {
+    width: 100%;
+  }
+  .youtube::before {
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: all 0.3s;
+    width: 100%;
+    z-index: 10;
+  }
+  .youtube:hover::before {
+    background: rgba(255,255,255,0.3);
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  .youtube::after {
+    content: "";
+    background: url(../img/instructor/youtube-btn-black.png) no-repeat center;
+    background-size: 80px 80px;
+    left: 0;
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+  }
+  .youtube:hover::after {
+    content: "";
+    background: url(../img/instructor/youtube-btn.png) no-repeat center;
+    background-size: 80px 80px;
+    left: 0;
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+  }
+  /*↑↑↑動画SP*/
+/*SP*/
+}
+
+@media screen and (min-width:768px) {
+/*PC*/
+  .instructor-dp-profile {
+    padding-right: 24px;
+  }
+  .instructor-dp-profile-img {
+    float: left;
+    margin-right: 24px;
+    width: 40%;
+  }
+  .instructor-dp-profile-desc {
+    float: right;
+    margin-right: -24px;
+    width: 60%;
+  }
+  .instructor-dp-briefly {
+    font-size: 18px;
+  }
+  .instructor-dp-profile-desc dl dt {
+    float: left;
+    clear: left;
+    padding-bottom: 0.75em;
+    vertical-align: top;
+    width: 11em;
+  }
+  .instructor-dp-profile-desc dl dd {
+    margin-left: 11.75em;
+    padding-bottom: 0.75em;
+  }
+  #instructor-dp-interview .interview-box {
+    width: 100%;
+  }
+  #instructor-dp-interview .interview-wrap01 .interview-box {
+    float: left;
+    margin: 0 -200px 0 0;
+  }
+  #instructor-dp-interview .interview-wrap01 .interview-box-inn {
+    margin-right: 224px;
+  }
+  #instructor-dp-interview .interview-wrap02 .interview-box-inn {
+    margin-left: 224px;
+  }
+  #instructor-dp-interview .interview-wrap02 .interview-box {
+    float: right;
+    margin: 0 0 0 -200px;
+  }
+  #instructor-dp-interview .inst-interview-sub {
+    width: 200px;
+  }
+  #instructor-dp-interview .interview-wrap01 .inst-interview-sub {
+    float: right;
+  }
+  #instructor-dp-interview .interview-wrap02 .inst-interview-sub {
+    float: left;
+  }
+
+  /*↓↓↓動画PC*/
+  .sp-youtube-main {
+    display: none;
+  }
+  .pc-youtube-main {
+    display: block;
+    margin: 120px auto 0;
+    position: relative;
+    width: 90%;
+    max-width: 960px;
+  }
+  .youtube-pop-area {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 600px;
+  }
+  .youtube-pop-area a {
+    display: inline-block;
+    position: relative;
+  }
+  .youtube-pop-area a:before {
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: all 0.3s;
+    width: 100%;
+    z-index: 10;
+  }
+  .youtube-pop-area a:after {
+    content: "";
+    background: url(../img/instructor/youtube-btn-black.png) no-repeat center;
+    background-size: 80px 80px;
+    left: 0;
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+  }
+  .youtube-pop-area a:hover::after {
+    content: "";
+    background: url(../img/instructor/youtube-btn.png) no-repeat center;
+    background-size: 80px 80px;
+    left: 0;
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+  }
+  .youtube-pop-area a img {
+    display: inline-block;
+    width: 100%;
+  }
+  /*↑↑↑動画PC*/
+/*PC*/
+}
+
+@media screen and (min-width:960px) {
+/*960以上*/
+  .instructor-dp-profile {
+    padding-right: 48px;
+  }
+  .instructor-dp-profile-img {
+    float: left;
+    margin-right: 48px;
+    width: 40%;
+  }
+  .instructor-dp-profile-desc {
+    float: right;
+    margin-right: -48px;
+    width: 60%;
+  }
+  #instructor-dp-interview .interview-wrap01 .interview-box {
+    margin: 0 -240px 0 0;
+  }
+  #instructor-dp-interview .interview-wrap01 .interview-box-inn {
+    margin-right: 272px;
+  }
+  #instructor-dp-interview .interview-wrap02 .interview-box-inn {
+    margin-left: 272px;
+  }
+  #instructor-dp-interview .interview-wrap02 .interview-box {
+    margin: 0 0 0 -240px;
+  }
+  #instructor-dp-interview .inst-interview-sub {
+    width: 240px;
+  }
+/*960以上*/
+}
+
+.instructor-dp-profile-desc dl dd.inst-type img {
+  height: 14px;
+  margin-right: 4px;
+  position: relative;
+  top: 2px;
+  width: 21px;
+}
+.btn-trial a {
+  display: inline-block;
+  line-height: 0;
+}
+#staff-carousel {
+  margin-top: 40px;
+  padding-bottom: 32px;
+}
+.staff-carousel-tit,
+.inst-carousel-tit {
+  color: #111;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 32px;
+  padding-top: 23px;
+  position: relative;
+}
+.staff-carousel-tit:before {
+  background: url(../img/staff/bg-staff-slide-tit.png) no-repeat;
+  background-size: 96px 23px;
+  content: "";
+  height: 23px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 96px;
+}
+.inst-carousel-tit:before {
+  background: url(../img/instructor/bg-instructor-slide-tit.png) no-repeat;
+  background-size: 138px 16px;
+  content: "";
+  height: 16px;
+  left: 0;
+  top: 0;
+  position: absolute;
+  width: 138px;
+}
+#staff-slide {
+  margin: 32px 32px 16px;
+}
+#staff-slide li {
+  padding: 0 16px;
+  text-align: center;
+}
+#staff-slide li .staff-slide-face img {
+  border-radius: 50%;
+}
+.staff-slide-name {
+  color: #111;
+  font-family: 'Droid Serif', serif;
+  font-weight: 700;
+  font-size: 15px;
+}
+.staff-carousel-link {
+  text-align: right;
+}
+.staff-carousel-link a {
+  border-radius: 5px;
+  box-shadow: 0 1px 0 #acacac;
+  background: #fff;
+  border: 1px solid #c9c9c9;
+  color: #111;
+  display: inline-block;
+  font-size: 14px;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 24px;
+  position: relative;
+}
+.staff-carousel-link a:hover {
+  opacity: 0.7;
+}
+.staff-carousel-link a:before {
+  background: url(../img/common/arrow-text-area-gr.png) no-repeat right center;
+  background-size: auto 90%;
+  content: "";
+  display: block;
+  height: 12px;
+  right: 8px;
+  top: 12px;
+  position: absolute;
+  width: 12px;
+}
+@media screen and (max-width:767px) {
+/*SP*/
+  #staff-slide li {
+    padding: 0 8px;
+  }
+  .staff-slide-name {
+    font-size: 13px;
+  }
+/*SP*/
+}
+
+/*↑↑↑講師詳細*************************************************/
