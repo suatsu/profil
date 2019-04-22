@@ -140,10 +140,8 @@
 					<dd>.Net系全般（C#、VB.Net、ASP.Net）、MicrosoftOfficeVBA、HTML、Javascript、PHP、Java、</dd>
 					<dt>DB</dt>
 					<dd>Oracle、SQLServer、MySQL、PostgreSQL</dd>
-					<dt></dt>
-					<dd></dd>
-					<dt></dt>
-					<dd></dd>
+					<dt>その他</dt>
+					<dd>googlemapsapi、salesforce、WebGISエンジン各種</dd>
                         <!-- Google Map END -->
 					</div>
 				</div>
@@ -162,7 +160,11 @@
 				<div class="interview-wrap01 clearfix">
 					<div class="interview-box">
                         <!-- Google Map START -->
-					ああああ
+					現時点で、何を作成していくかは考えておりませんが、スマートウォッチとGIPを組み合わせたリアル宝探しゲームのようなシステムはどうかと考えています。<br/>
+					たとえば、地図上に複数のポイントを配置、ポイントには画像や文字、動画などを紐付け、各ポイントへのヒントを登録する。<br/>
+					探すほうは、地図上には大まかな範囲が表示された地図と、スマートウォッチ上に表示された矢印をヒントに場所を探していく。<br/>
+					場所に近づくと登録されたヒントがスマホ上に表示され、最後のポイントにたどり着く<br/>
+					というもの。
                         <!-- Google Map END -->
 					</div>
 				</div>
