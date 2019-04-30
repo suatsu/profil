@@ -75,6 +75,29 @@
                 
                 <!-- いらなかったら削除 START -->
 				<div class="instructor-dp-interview-tit">
+					<h3>最寄り駅</h3>
+				</div>
+                <!-- いらなかったら削除 END -->
+                
+				<div class="interview-wrap01 clearfix">
+					<div class="interview-box" style="margin:auto">
+                        <!-- Google Map START -->
+<iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDgRWtjyXd4pDz9OHLyUZuNJPTNj8G-wlc&q=東川口駅" width="90%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+<!-- <iframe src="http://www.google.com/maps/embed/v1/view?key=AIzaSyDgRWtjyXd4pDz9OHLyUZuNJPTNj8G-wlc"></iframe> -->
+
+						
+                        <!-- Google Map END -->
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<section id="instructor-dp-interview">
+			<div class="container medium">
+                
+                <!-- いらなかったら削除 START -->
+				<div class="instructor-dp-interview-tit">
 					<h3>職歴</h3>
 				</div>
                 <!-- いらなかったら削除 END -->
@@ -160,12 +183,25 @@
 				<div class="interview-wrap01 clearfix">
 					<div class="interview-box">
                         <!-- Google Map START -->
-					現時点で、何を作成していくかは考えておりませんが、スマートウォッチとGIPを組み合わせたリアル宝探しゲームのようなシステムはどうかと考えています。<br/>
-					たとえば、地図上に複数のポイントを配置、ポイントには画像や文字、動画などを紐付け、各ポイントへのヒントを登録する。<br/>
-					探すほうは、地図上には大まかな範囲が表示された地図と、スマートウォッチ上に表示された矢印をヒントに場所を探していく。<br/>
-					場所に近づくと登録されたヒントがスマホ上に表示され、最後のポイントにたどり着く<br/>
-					というもの。
-                        <!-- Google Map END -->
+<dt>【タイトル】</dt>
+<dd>通勤アラーム</dd>
+<dt>【はじめに】</dt>
+<dd>私自身、現在の勤務先が横浜であり、通勤時間が片道2時間とかなり長時間です。
+そのため、働き方改革により、残業時間が短くなったとはいえ、通勤時間を考慮すると、帰宅が遅くなってしまいます。
+朝も、出勤時間に合わせるため、電車遅延などの不測の事態も考慮すると、家を出る時間も早くせざる追えず、どうしても睡眠時間が少なくなってしまいます。
+そこで、長時間の通勤時間が貴重な睡眠時間としたいのですが、寝入ってしまい、寝過ごしてしまうと、次の駅までの駅間が長く、出社時間に間に合いません。
+そこで、駅を選択し、到着したらアラームがなるようアプリが存在したら、乗り過ごしを考えることなく、貴重な睡眠が取れると考えました。</dd>
+<dt>【現在のアプリ】</dt>
+<dd>現在も、GPSを使用した類似のアプリは存在するが、GPSである限り、天候が悪かったり、地下鉄などでは精度が悪く、使用することができません。
+時間でのアラームでは、遅延した際にかなり前に起こされてしまったり、その後どのくらいで到着するかがわからないので、結局意味を成しません。</dd>
+<dt>【目的】</dt>
+<dd>天候や地下に左右されず、駅に到着したことを判断できる仕組みを検討し、構築すること。
+実施案
+Wifiの電波や、基地局情報から、現在の位置特定（DGPS等）を行い、駅にいることを判断することを検証、検討する。
+もしくは、壮大な計画となるが、電車の中に、駅情報を配信する仕組みを設け、その情報を取得する。</dd>
+<dt>【課題】</dt>
+<dd>・Wifiや基地局も情報を元に、駅の特定が可能かどうか<br/>
+・電車へは現在位置を特定する情報は送られているはずなので、その情報を一般に使用できないかどうかを検討する。</dd>
 					</div>
 				</div>
 			</div>
